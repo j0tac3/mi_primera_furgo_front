@@ -1,0 +1,48 @@
+.etiqueta_container{
+    width: 90%;
+    margin: 0 auto;
+    /* display: flex;
+    justify-content: center; */
+}
+.form-container{
+    display: grid;
+    justify-content: center;
+    color:#aaa;
+}
+.form{
+    width: 20rem;
+}
+.input-group{
+    display: grid;
+    margin-bottom: 1rem;
+}
+.label__item{
+ margin-bottom: 0.5rem;   
+}
+.input__item{
+    border: none;
+    outline: none;
+    border-bottom: solid 1px #aaaa;
+    padding: 0 0.5rem;
+}
+
+.add-button{
+    width: 5rem;
+    height: 5rem;
+    margin: 0.5rem;
+    border: solid 1px #aaa;
+}
+.add-button:hover{
+    cursor: pointer;
+    box-shadow:1px 1px 10px 0px #aaa
+}
+.seccion-container{
+    margin-top: 0.5rem;
+    border: dashed 1px #aaaa;
+    min-height: 1rem;
+    min-width: 20rem;
+}
+.is-invalid{
+    color: #F14D36;
+    border-bottom: solid 1px #F14D36;
+}

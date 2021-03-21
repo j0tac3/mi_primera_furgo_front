@@ -1,0 +1,22 @@
+<div class="body">
+    <img src="assets/media/icons/back.svg" 
+    alt="Atras"
+    class="icon-home"
+    [routerLink]="['']">
+    <div class="home-container">
+        <div class="main-container" [routerLink]="['etiquetas']">
+            <div class="icon-container">
+                <img src="assets/media/icons/etiqueta.svg" 
+                alt="Camperizar"
+                class="">
+                <span class="icon-text">ETIQUETAS</span>
+            </div>
+            <div class="icon-container" [routerLink]="['entradas']">
+                <img src="assets/media/icons/entradas.svg" 
+                alt="Blog"
+                class="">
+                <span class="icon-text">ENTRADAS</span>
+            </div>
+        </div>    
+    </div>
+</div>

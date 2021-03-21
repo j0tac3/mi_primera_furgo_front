@@ -1,0 +1,11 @@
+<div class="body">
+    <div class="home-container">
+        <div class="main-container">
+            <app-option-menu
+            *ngFor="let url of menu_URL"
+            [url]=url
+            (ocultarMenu)="ocultarMenu($event)"
+            ></app-option-menu>
+        </div>
+    </div>
+</div>

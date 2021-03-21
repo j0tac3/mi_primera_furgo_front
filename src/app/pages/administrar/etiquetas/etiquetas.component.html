@@ -1,0 +1,41 @@
+<div class="etiqueta_container">
+    <app-back-button
+        [ruta]="'administrar'">
+    </app-back-button>
+    <div class="form-container">
+        <form   action=""
+                class="form" 
+                autocomplete="off"
+                [formGroup]="formTags"
+                (ngSubmit)="saveTag( f )"
+                #f="ngForm">
+            <div class="input-group">
+                <label for="descEtiqueta" class="label__item">
+                        Descripcion
+                </label>
+                <input  type="text"
+                        name="desc"
+                        placeholder="Viajes, Bizkaia..."
+                        class="input__item"
+                        formControlName="desc"
+                        [class.is-invalid]="descValid">
+                        <small *ngIf="descValid" class="text-danger">
+                            * Ingrese al menos 5 letras
+                        </small>
+            </div>
+            <button style="width: 10rem;">Guardar</button>
+        </form>
+    </div>
+    <table class="table mt-3 animated fadeIn faster">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">ID</th>
+            <th scope="col">Descripcion</th>
+        </tr>
+        <tr *ngFor="let tag of etiquetas; let i = index">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ tag.id }}</td>
+            <td>{{ tag.desc }}</td>
+        </tr>
+    </table>
+</div>

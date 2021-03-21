@@ -1,0 +1,9 @@
+<a [routerLink]="['/', url]">
+    <div class="icon-container" 
+        (click)="onOcultarMenu()">
+        <img src="assets/media/icons/{{ url }}.svg" 
+        alt="{{ url }}"
+        class="icon-home">
+        <span class="icon-text">{{ url | uppercase }}</span>
+    </div>
+</a>

@@ -1,0 +1,68 @@
+
+<div class="form-container" class="form-container">
+    <form   class="form"
+            [formGroup]="formEntrada">
+        <div class="input-group">
+            <label  for="titulo" 
+                    class="label__item">
+                Título
+            </label>
+            <input  type="text" 
+                    class="input__item"
+                    placeholder="Mi primer viaje ...">
+        </div>
+
+        <div class="input-group">
+            <label  for="" 
+                    class="label__item">
+                    Imagen de Cabecera
+            </label>
+            <div class="img_visual">
+                <div class="header-container">
+                    <button class="btn__add btn__add-imageHeader"
+                        style="margin: 0 auto;"
+                        (click)="headerSelect.click()">                    
+                    </button>
+                    <img [src]="url_header" alt="" class="header-img">
+                </div>
+            </div>
+            <input  hidden
+                        type="file" 
+                        class="input__item"
+                        name="headerImage"
+                        formControlName="headerImage"
+                        accept="image/png, image/jpeg"
+                        #headerSelect
+                        (change)="openFile()">
+        </div>
+        
+        <div class="input-group">
+            <label  for="etiquetas" 
+                    class="label__item">
+                Etiquetas
+            </label>
+            <div class="input__etiquetas">
+                <input  type="text" 
+                        class="input__item input__etiqueta"
+                        placeholder="Euskadi ..."
+                        name="descEtiqueta"
+                        formControlName="descEtiqueta">
+                <button class="btn__add"
+                        (click)="addTag()">                    
+                </button>
+            </div>
+            <div class="etiquetas__group">
+                <span *ngFor="let etiqueta of etiquetas">
+                    {{ etiqueta.desc }}
+                    <span *ngIf="etiquetas.length > 1"> - </span>
+                </span>
+            </div>
+        </div>
+        <div class="input-group">
+            <label  for="secciones" 
+                    class="label__item">
+                Secciones
+            </label>
+        </div>
+    </form>
+</div>

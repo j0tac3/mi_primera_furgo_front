@@ -1,0 +1,74 @@
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 100vw;
+    height: 100vh; */
+    position: relative;
+}
+.icon-inicio{
+    width: 2rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+.icon-inicio:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.home-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.main-container{
+    width: 100%;
+    max-width: 40rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #aaaa;
+}
+.icon-container{
+    padding: 1rem;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: transparent;
+    transition: background-color 0.5s ease,
+                color 0.7s ease;
+}
+.icon-container:hover{
+    cursor: pointer;
+    background-color: rgb(82, 82, 82);
+    color: #fff;
+}
+.icon-text{
+    font-size: 0.8rem;
+    position: absolute;
+    top: 50%;
+    font-weight: bold;
+}
+.icon-home{
+    width: 2rem;
+}
+
+@media (max-width: 600px) {
+    /* .main-container{
+        width: auto;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+    }
+    .icon-container{
+        justify-self: center;
+        align-self: center;
+    } */
+}
