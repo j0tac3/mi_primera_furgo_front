@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { EtiquetaModel } from '../models/etiqueta.model';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,26 +12,19 @@ export class EtiquetasService {
 
   constructor(private http: HttpClient) { }
 
-  createTag( tag: EtiquetaModel) {
-    return this.http.post(`${ this.url }`, tag)
-    .pipe(
-      map( (resp: any) => {
-        tag.desc = resp.desc;
-        return tag;
-      })
-    )
+  createTag( tag: EtiquetaModel): Observable<any> {
+    const headers = { 'content-type' : 'application/json' };
+    const body = JSON.stringify(tag);
+    console.log(body);
+    return this.http.post<EtiquetaModel>(this.url, body, {'headers': headers});
   }
 
-  updateTag( tag: EtiquetaModel) {
-    return this.http.put(`${this.url}/${tag.id}`, tag);
+  updateTag( tag: EtiquetaModel): Observable<EtiquetaModel> {
+    return this.http.put<EtiquetaModel>(`${this.url}/${tag.id}`, tag);
   }
 
-  getTags() {
-    return this.http.get(`${this.url}`)
-    .pipe(
-     /*  map( resp => this.createArray(resp) ) */
-      map( this.createArray)
-    );
+  getTags(): Observable<EtiquetaModel[]> {
+    return this.http.get<EtiquetaModel[]>(`${this.url}`);
   }
 
   private createArray( tagObj: Object) {

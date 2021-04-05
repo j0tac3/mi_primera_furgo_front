@@ -1,0 +1,16 @@
+<div    class="input-group">
+    <label  for="secciones" 
+            class="label__item">
+        Secciones
+    </label>
+    <div class="img_visual">
+        <button class="btn__add btn__add-imageHeader btn__addSeccion"
+                (click)="showFormSecciones()"> 
+        </button>
+        <div class="header-container secciones__container">
+            <app-seccion-miniature *ngFor="let seccion of secciones"
+                                    [seccionInfo]=seccion>
+            </app-seccion-miniature>
+        </div>
+    </div>
+</div>

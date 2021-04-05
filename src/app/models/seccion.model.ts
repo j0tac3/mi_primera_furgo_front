@@ -1,6 +1,8 @@
 export class SeccionModel {
-    id: string;
-    orden: string;
+    id: number;
+    orden: number;
     texto: string;
-    post_id: string;
+    post_id: number;
+
+    constructor() {}
 }

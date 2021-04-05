@@ -1,6 +1,10 @@
 export class PostModel {
-    id: string;
+    id: number;
     titulo: string;
-    img_url: string;
-    user_id: string;
+    image_url?: string;
+    user_id: number;
+    created_at?: Date;
+    updated_at?: Date;
+
+    constructor() {}
 }

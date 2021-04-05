@@ -32,6 +32,9 @@
     border: none;
     background-color: transparent;
 }
+.btn__add-img{
+    background-image: url(../../../assets/media/icons/camara.svg);
+}
 .add-button:hover{
     cursor: pointer;
     box-shadow:1px 1px 10px 0px #aaa
@@ -55,7 +58,7 @@
     justify-content: center;
     margin: 1rem 0;
     border: dashed 1px #aaaa;
-    padding: 0.5rem;
+    /*padding: 0.5rem;*/
     overflow: hidden;
 }
 .header-img{
@@ -67,7 +70,8 @@
 }
 .img_visual{
     position: relative;
-    
+    display: grid;
+    justify-content: stretch;
 }
 .btn__add-imageHeader{
     position: absolute;
@@ -77,4 +81,39 @@
 .btn__add-imageHeader:hover{
     opacity: 1;
     transform: scale(1.1);
+}
+.etiquetas__group{
+    margin-top: 1rem;
+}
+.etiqueta{
+    /*border: solid 1px #aaaa;*/
+    border-radius: 5px;
+    padding: 0.3rem;
+    margin-right: 0.5rem;
+    background-color: #aaaa;
+    color: #ffff;
+}
+.form-secciones{
+    border: dashed 1px lightblue;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+.input__textSeccion{
+    resize: none;
+    border: solid 1px #aaaa;
+}
+.buttons-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.secciones__container{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+}
+.btn__addSeccion{
+    position: relative;
+    justify-self: center;
+    background-image: url(../../../assets/media/icons/upload.svg);
 }

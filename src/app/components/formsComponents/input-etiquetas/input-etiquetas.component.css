@@ -1,0 +1,40 @@
+.input__group{
+    display: grid;
+    margin-bottom: 1rem;
+}
+.input__item{
+    border: none;
+    outline: none;
+    border-bottom: solid 1px #aaaa;
+    padding: 0 0.5rem;
+}
+.input__etiqueta{
+    width: 50%;
+    margin-right: 1rem
+}
+.btn__add--tag{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    padding: 0;
+    background-image: url(../../../../assets/media/icons/next_first.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: transparent;
+    transition: background-image 0.2s;
+}
+.btn__add--tag:hover{
+    background-image: url(../../../../assets/media/icons/next_one.svg);
+}
+.etiquetas__group{
+    margin-top: 1rem;
+}
+.etiqueta{
+    border-radius: 5px;
+    padding: 0.3rem;
+    margin-right: 0.5rem;
+    background-color: #aaaa;
+    color: #ffff;
+}

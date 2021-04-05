@@ -1,0 +1,30 @@
+<div    class="input__group"
+        [formGroup]="formGroupParent"
+        >
+    <label  for="etiquetas"
+            class="label__item">
+        Etiquetas
+    </label>
+    <div>
+        <input  type="text" 
+        name="etiquetas" 
+        id=""
+        class="input__item input__etiqueta"
+        formControlName="etiquetasComponent">
+        <!-- list="tagFromDB">
+        <datalist id="tagFromDB">
+            <option *ngFor="let etiqueta of tagsFromDB" [value]="etiqueta.desc">
+                {{ etiqueta.desc }}
+            </option>
+        </datalist> -->
+        <button class="btn__add--tag"
+                (click)='addTagToArray()'>
+        </button>
+    </div>    
+    <div class="etiquetas__group">
+        <span *ngFor="let etiqueta of etiquetas"
+        class="etiqueta">
+            {{ etiqueta.desc }}
+        </span>
+    </div>
+</div>

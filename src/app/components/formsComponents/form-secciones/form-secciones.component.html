@@ -1,0 +1,58 @@
+<form   class="form form-secciones"
+        [formGroup]="formSeccion"
+        *ngIf="showFormSeccion">
+        <div class="input-group">
+            <label  for="" 
+                    class="label__item">
+                    Imagen de Seccion
+            </label>
+            <div class="img_visual">
+                <div class="header-container">
+                    <button class="btn__add btn__add-imageHeader btn__add-img"
+                        style="margin: 0 auto;"
+                        (click)="imageSeccionSelect.click()">                    
+                    </button>
+                    <img [src]="url_imgSeccion" alt="" class="header-img">
+                </div>
+            </div>
+            <input  hidden
+                        type="file" 
+                        class="input__item"
+                        name="imgSeccion"
+                        formControlName="imgSeccion"
+                        accept="image/png, image/jpeg"
+                        #imageSeccionSelect
+                        (change)="openFileSeccion()">
+    </div>
+    <div class="input-group">
+        <label for="textSeccion"
+                class="label__item">
+            Texto
+        </label>
+        <textarea   type="text"
+                    name="textSeccion"
+                    formControlName="textSeccion"
+                    class="input__item input__textSeccion"
+                    rows="5"></textarea>
+    </div>
+    <div class="input-group">
+        <label for="orden"
+                class="label__item">
+            Orden
+        </label>
+        <input type="number"
+                name="ordenSeccion"
+                formControlName="ordenSeccion"
+                class="input__item">
+    </div>
+    <div class="buttons-container">
+        <button type="button" class="btn btn-primary"
+                (click)="saveSeccion()">
+            Guardar
+        </button>
+        <button type="button" class="btn btn-warning"
+                (click)="cancelarSeccion()">
+            Cancelar
+        </button>
+    </div>
+</form>

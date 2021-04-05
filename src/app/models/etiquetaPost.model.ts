@@ -1,4 +1,6 @@
 export class EtiquetaPostModel {
-    post_id: string;
-    etiqueta_id: string;
+    post_id: number;
+    etiqueta_id: number;
+
+    constructor() {}
 }

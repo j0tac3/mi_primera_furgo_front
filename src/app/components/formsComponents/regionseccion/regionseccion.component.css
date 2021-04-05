@@ -1,0 +1,53 @@
+.input-group{
+    display: grid;
+    margin-bottom: 1rem;
+}
+.label__item{
+ margin-bottom: 0.5rem;   
+}
+.img_visual{
+    position: relative;
+    display: grid;
+    justify-content: stretch;
+}
+.seccion-container{
+    margin-top: 0.5rem;
+    border: dashed 1px #aaaa;
+    min-height: 1rem;
+    min-width: 20rem;
+}
+.header-container{
+    width: 100%;
+    min-height: 3rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+    border: dashed 1px #aaaa;
+    overflow: hidden;
+}
+.btn__add{
+    width: 2rem;
+    height: 2rem;
+    background-image: url(../../../../assets/media/icons/add.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    background-color: transparent;
+}
+.btn__add-imageHeader{
+    position: absolute;
+    opacity: 0.5;
+    z-index: 999;
+}
+.btn__add-imageHeader:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+.btn__addSeccion{
+    position: relative;
+    justify-self: center;
+    background-image: url(../../../../assets/media/icons/upload.svg);
+}

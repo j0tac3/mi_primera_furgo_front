@@ -1,6 +1,7 @@
 export class EtiquetaModel{
-    id: string;
+    id: number;
     desc: string;
 
-    constructor() {}
+    constructor() {
+    }
 }

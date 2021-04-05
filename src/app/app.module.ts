@@ -20,6 +20,11 @@ import { UsuariosComponent } from './pages/administrar/usuarios/usuarios.compone
 import { OptionMenuComponent } from './components/option-menu/option-menu.component';
 import { BackButtonComponent } from './components/back-button/back-button.component';
 import { NewPostFormComponent } from './components/new-post-form/new-post-form.component';
+import { SeccionMiniatureComponent } from './components/formsComponents/seccion-miniature/seccion-miniature.component';
+import { InputEtiquetasComponent } from './components/formsComponents/input-etiquetas/input-etiquetas.component';
+import { InputImageHeaderComponent } from './components/formsComponents/input-image-header/input-image-header.component';
+import { RegionseccionComponent } from './components/formsComponents/regionseccion/regionseccion.component';
+import { FormSeccionesComponent } from './components/formsComponents/form-secciones/form-secciones.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +43,11 @@ import { NewPostFormComponent } from './components/new-post-form/new-post-form.c
     OptionMenuComponent,
     BackButtonComponent,
     NewPostFormComponent,
+    SeccionMiniatureComponent,
+    InputEtiquetasComponent,
+    InputImageHeaderComponent,
+    RegionseccionComponent,
+    FormSeccionesComponent,
   ],
   imports: [
     BrowserModule,
